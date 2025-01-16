@@ -1,0 +1,20 @@
+[project]
+name = "air-quality-monitoring"
+requirements = []
+costs_version = 2
+[contracts.air-quality-monitor]
+path = "contracts/air-quality-monitor.clar"
+depends_on = []
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = true
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
